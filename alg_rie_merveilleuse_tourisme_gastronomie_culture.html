@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algérie Merveilleuse | Tourisme, Gastronomie & Culture</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                        },
+                        terracotta: {
+                            400: '#f87171',
+                            500: '#ef4444',
+                            600: '#dc2626',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                        },
+                        mediterranean: {
+                            50: '#f0f9ff',
+                            500: '#06b6d4',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        desert: {
+                            100: '#fdf6e2',
+                            200: '#fbf0cd',
+                            800: '#2b2318',
+                            900: '#1a140d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Styles & Utilities */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass-card {
+            background: rgba(26, 20, 13, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+        }
+        .dark .glass-nav {
+            background: rgba(15, 12, 8, 0.9);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(12, 74, 110, 0.6) 0%, rgba(15, 12, 8, 0.85) 100%);
+        }
+        .text-gradient-saffron {
+            background: linear-gradient(135deg, #f59e0b 0%, #dc2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-glow {
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.3);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1a140d;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d97706;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-amber-50/40 dark:bg-desert-900 text-slate-800 dark:text-amber-100 font-sans transition-colors duration-300 custom-scrollbar selection:bg-saffron-500 selection:text-white">
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-amber-900/10 dark:border-amber-500/10 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-saffron-600 to-terracotta-700 flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-saffron-600/30 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-star-and-crescent"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-tight text-slate-900 dark:text-amber-50 group-hover:text-saffron-600 dark:group-hover:text-saffron-400 transition-colors">Algérie <span class="text-saffron-600 dark:text-saffron-400">Merveilleuse</span></span>
+                        <span class="text-[10px] tracking-widest uppercase text-terracotta-700 dark:text-saffron-400 font-bold">Tourisme & Patrimoine</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#accueil" class="hover:text-saffron-600 dark:hover:text-saffron-400 transition-colors">Accueil</a>
+                    <a href="#destinations" class="hover:text-saffron-600 dark:hover:text-saffron-400 transition-colors">Destinations</a>
+                    <a href="#gastronomie" class="hover:text-saffron-600 dark:hover:text-saffron-400 transition-colors">Gastronomie</a>
+                    <a href="#culture" class="hover:text-saffron-600 dark:hover:text-saffron-400 transition-colors">Culture & Art</a>
+                    <a href="#itineraire" class="hover:text-saffron-600 dark:hover:text-saffron-400 transition-colors">Planificateur</a>
+                    <a href="#quiz" class="hover:text-saffron-600 dark:hover:text-saffron-400 transition-colors">Quiz</a>
+                    <a href="#galerie" class="hover:text-saffron-600 dark:hover:text-saffron-400 transition-colors">Galerie</a>
+                </nav>
+
+                <!-- Actions & Mobile Menu Toggle -->
+                <div class="flex items-center gap-3">
+                    <!-- Audio Vibe Control Button -->
+                    <button id="audio-toggle-btn" onclick="toggleAudioVibe()" title="Activer l'ambiance sonore de l'Algérie" class="p-2.5 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-saffron-400 hover:bg-saffron-500 hover:text-white dark:hover:bg-saffron-500 dark:hover:text-white transition-all flex items-center justify-center border border-saffron-500/20">
+                        <i class="fa-solid fa-volume-xmark text-lg" id="audio-icon"></i>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button onclick="toggleDarkMode()" class="p-2.5 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-saffron-400 hover:bg-saffron-500 hover:text-white dark:hover:bg-saffron-500 dark:hover:text-white transition-all border border-saffron-500/20" title="Changer le thème">
+                        <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                        <i class="fa-solid fa-sun hidden dark:inline text-lg"></i>
+                    </button>
+
+                    <!-- Authorship Badge in Header -->
+                    <div class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-amber-500/10 to-terracotta-500/10 px-3 py-1.5 rounded-full border border-saffron-500/30 text-xs font-semibold">
+                        <i class="fa-solid fa-code text-saffron-600 dark:text-saffron-400"></i>
+                        <span class="text-slate-700 dark:text-amber-200">Par <strong class="text-saffron-600 dark:text-saffron-400">Sidahmed & Abdessamed</strong></span>
+                    </div>
+
+                    <!-- Mobile Hamburger Button -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-slate-700 dark:text-amber-200 hover:bg-amber-100 dark:hover:bg-amber-900/40">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-amber-900/10 dark:border-amber-500/10 bg-amber-50 dark:bg-desert-900 px-4 pt-3 pb-6 space-y-3">
+            <a href="#accueil" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium hover:text-saffron-600">Accueil</a>
+            <a href="#destinations" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium hover:text-saffron-600">Destinations</a>
+            <a href="#gastronomie" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium hover:text-saffron-600">Gastronomie</a>
+            <a href="#culture" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium hover:text-saffron-600">Culture & Art</a>
+            <a href="#itineraire" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium hover:text-saffron-600">Planificateur</a>
+            <a href="#quiz" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium hover:text-saffron-600">Quiz</a>
+            <a href="#galerie" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium hover:text-saffron-600">Galerie</a>
+            <div class="pt-2 border-t border-amber-200 dark:border-amber-800 text-xs text-center text-amber-800 dark:text-amber-300 font-semibold">
+                Développé par Sidahmed et Abdessamed
+            </div>
+        </div>
+    </header>
+
+    <main class="mt-20">
+        <!-- HERO SECTION -->
+        <section id="accueil" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden py-20">
+            <!-- Hero Background Image Slider Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=2000&q=80" alt="Désert du Sahara Algérien" class="w-full h-full object-cover scale-105 animate-pulse duration-10000" id="hero-bg-img">
+                <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+
+            <!-- Hero Content Container -->
+            <div class="relative z-10 max-w-5xl mx-auto px-4 text-center text-white">
+                <!-- Main Developer Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-saffron-400/40 text-saffron-300 text-xs sm:text-sm font-semibold mb-8 gold-glow animate-bounce">
+                    <i class="fa-solid fa-laptop-code text-saffron-400"></i>
+                    <span>Développé par <span class="underline decoration-terracotta-500 font-bold text-white">Sidahmed</span> et <span class="underline decoration-saffron-400 font-bold text-white">Abdessamed</span></span>
+                </div>
+
+                <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Découvrez la Magie de <br>
+                    <span class="text-gradient-saffron font-serif drop-shadow-lg">l'Algérie Éternelle</span>
+                </h1>
+
+                <p class="max-w-3xl mx-auto text-lg sm:text-xl text-amber-100/90 font-light mb-10 leading-relaxed">
+                    Entre dunes dorées du Sahara, cités millénaires, eaux cristallines de la Méditerranée et traditions culinaires raffinées. Laissez-vous envoûter par le plus grand pays d'Afrique.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                    <a href="#destinations" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-saffron-500 to-terracotta-600 text-white font-bold text-lg hover:from-saffron-600 hover:to-terracotta-700 transition-all transform hover:-translate-y-1 shadow-lg shadow-saffron-600/30 flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-compass"></i>
+                        Explorer les Destinations
+                    </a>
+                    <a href="#gastronomie" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-bold text-lg transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-utensils"></i>
+                        Gastronomie & Culture
+                    </a>
+                </div>
+
+                <!-- Quick Stats Strip -->
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-center">
+                    <div>
+                        <div class="font-serif text-2xl sm:text-3xl font-bold text-saffron-400">7 Sites</div>
+                        <div class="text-xs text-amber-200/80 uppercase tracking-wider mt-1">Unesco Patrimoine</div>
+                    </div>
+                    <div>
+                        <div class="font-serif text-2xl sm:text-3xl font-bold text-saffron-400">1 200 km</div>
+                        <div class="text-xs text-amber-200/80 uppercase tracking-wider mt-1">Littoral Méditerranéen</div>
+                    </div>
+                    <div>
+                        <div class="font-serif text-2xl sm:text-3xl font-bold text-saffron-400">80%</div>
+                        <div class="text-xs text-amber-200/80 uppercase tracking-wider mt-1">Majestueux Sahara</div>
+                    </div>
+                    <div>
+                        <div class="font-serif text-2xl sm:text-3xl font-bold text-saffron-400">Millénaire</div>
+                        <div class="text-xs text-amber-200/80 uppercase tracking-wider mt-1">Histoire & Traditions</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOURISM & DESTINATIONS SECTION -->
+        <section id="destinations" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-saffron-600 dark:text-saffron-400 bg-saffron-500/10 px-3 py-1 rounded-full">Voyages & Terroirs</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-slate-900 dark:text-amber-50 mt-3">Destinations Incontournables</h2>
+                <p class="text-slate-600 dark:text-amber-200/80 mt-4 text-base sm:text-lg">Du vaste Sahara aux montagnes de Kabylie et cités historiques méditerranéennes.</p>
+            </div>
+
+            <!-- Region Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10" id="destination-filters">
+                <button onclick="filterDestinations('all')" class="dest-filter-btn active px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-saffron-500 text-white shadow-md">Toutes les régions</button>
+                <button onclick="filterDestinations('sahara')" class="dest-filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-amber-100 dark:bg-amber-950/60 text-slate-800 dark:text-amber-200 hover:bg-saffron-500 hover:text-white">Le Sahara</button>
+                <button onclick="filterDestinations('cote')" class="dest-filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-amber-100 dark:bg-amber-950/60 text-slate-800 dark:text-amber-200 hover:bg-saffron-500 hover:text-white">Côte & Villes Littorales</button>
+                <button onclick="filterDestinations('histoire')" class="dest-filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-amber-100 dark:bg-amber-950/60 text-slate-800 dark:text-amber-200 hover:bg-saffron-500 hover:text-white">Cités Historiques</button>
+                <button onclick="filterDestinations('montagnes')" class="dest-filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-amber-100 dark:bg-amber-950/60 text-slate-800 dark:text-amber-200 hover:bg-saffron-500 hover:text-white">Kabylie & Montagnes</button>
+            </div>
+
+            <!-- Destinations Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="destinations-grid">
+                <!-- Cards will be populated by JavaScript dynamically -->
+            </div>
+        </section>
+
+        <!-- GASTRONOMY SECTION -->
+        <section id="gastronomie" class="py-20 bg-amber-100/50 dark:bg-desert-800/50 border-y border-amber-900/10 dark:border-amber-500/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta-700 dark:text-saffron-400 bg-terracotta-500/10 px-3 py-1 rounded-full">Saveurs & Tradition</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-slate-900 dark:text-amber-50 mt-3">Gastronomie Algérienne</h2>
+                    <p class="text-slate-600 dark:text-amber-200/80 mt-4 text-base sm:text-lg">Un festival de saveurs méditerranéennes, berbères, ottomanes et sahariennes généreusement épicées.</p>
+                </div>
+
+                <!-- Featured Dish Banner -->
+                <div class="glass-card rounded-3xl overflow-hidden shadow-2xl mb-16 grid grid-cols-1 lg:grid-cols-2 border border-saffron-500/20">
+                    <div class="relative h-72 lg:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14e8?auto=format&fit=crop&w=1200&q=80" alt="Couscous Algérien" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-terracotta-600 text-white font-bold text-xs px-3 py-1.5 rounded-full shadow-lg uppercase">Patrimoine UNESCO</div>
+                    </div>
+                    <div class="p-8 sm:p-12 flex flex-col justify-center">
+                        <div class="flex items-center gap-2 text-saffron-600 dark:text-saffron-400 text-sm font-semibold mb-2">
+                            <i class="fa-solid fa-crown"></i> Le Plat Roi
+                        </div>
+                        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-amber-50 mb-4">Le Couscous Algérien (Seksu)</h3>
+                        <p class="text-slate-600 dark:text-amber-200/80 mb-6 leading-relaxed">
+                            Préparé à la vapeur de semoule fine roulée à la main, le couscous algérien se décline selon les régions : à la viande d'agneau et légumes de saison, sauce rouge relevée, ou sauce blanche parfumée à la cannelle et aux navets. En Kabylie, on le déguste aussi avec des fèves et du lait caillé (Lben).
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 rounded-lg bg-saffron-500/10 text-saffron-700 dark:text-saffron-300 text-xs font-semibold">Semoule roulée main</span>
+                            <span class="px-3 py-1 rounded-lg bg-saffron-500/10 text-saffron-700 dark:text-saffron-300 text-xs font-semibold">Pois chiches</span>
+                            <span class="px-3 py-1 rounded-lg bg-saffron-500/10 text-saffron-700 dark:text-saffron-300 text-xs font-semibold">Épices Ras el Hanout</span>
+                            <span class="px-3 py-1 rounded-lg bg-saffron-500/10 text-saffron-700 dark:text-saffron-300 text-xs font-semibold">Festif & Familial</span>
+                        </div>
+                        <button onclick="openRecipeModal('couscous')" class="self-start px-6 py-3 rounded-xl bg-terracotta-700 hover:bg-terracotta-800 text-white font-semibold transition-all flex items-center gap-2 shadow-lg shadow-terracotta-700/20">
+                            <i class="fa-solid fa-book-open"></i> Découvrir la Recette
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dishes Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="food-grid">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CULTURE, MUSIC & TRADITIONS SECTION -->
+        <section id="culture" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-saffron-600 dark:text-saffron-400 bg-saffron-500/10 px-3 py-1 rounded-full">Âme & Créativité</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-slate-900 dark:text-amber-50 mt-3">Culture, Musique & Artisanat</h2>
+                <p class="text-slate-600 dark:text-amber-200/80 mt-4 text-base sm:text-lg">Un héritage millénaire porté par les rythmes de l'Oud, les vêtements brodés d'or et l'artisanat ancestral.</p>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div class="flex justify-center border-b border-amber-900/10 dark:border-amber-500/20 mb-12">
+                <button onclick="switchCultureTab('musique')" id="tab-btn-musique" class="culture-tab-btn px-6 py-3 font-serif font-bold text-lg border-b-2 border-saffron-500 text-saffron-600 dark:text-saffron-400 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-music"></i> Musique & Genres
+                </button>
+                <button onclick="switchCultureTab('costumes')" id="tab-btn-costumes" class="culture-tab-btn px-6 py-3 font-serif font-bold text-lg border-b-2 border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-amber-200 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-shirt"></i> Tenues Traditionnelles
+                </button>
+                <button onclick="switchCultureTab('artisanat')" id="tab-btn-artisanat" class="culture-tab-btn px-6 py-3 font-serif font-bold text-lg border-b-2 border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-amber-200 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-hammer"></i> Artisanat d'Art
+                </button>
+            </div>
+
+            <!-- Tab Content Container -->
+            <div id="culture-tab-content">
+                <!-- Dynamically rendered tab content -->
+            </div>
+        </section>
+
+        <!-- INTERACTIVE FEATURE 1: CUSTOM TRAVEL PLANNER -->
+        <section id="itineraire" class="py-20 bg-gradient-to-br from-desert-900 to-amber-950 text-white relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-saffron-500/10 blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-terracotta-600/10 blur-3xl"></div>
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-bold uppercase tracking-widest text-saffron-400 bg-saffron-400/10 px-3 py-1 rounded-full border border-saffron-400/20">Outil Interactif</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-3">Mon Itinéraire Sur-Mesure</h2>
+                    <p class="text-amber-200/80 mt-3">Sélectionnez vos envies et obtenez un programme personnalisé pour explorer l'Algérie.</p>
+                </div>
+
+                <div class="glass-card p-6 sm:p-10 rounded-3xl border border-saffron-500/30 text-slate-900 dark:text-amber-100 shadow-2xl">
+                    <form id="itinerary-form" onsubmit="generateItinerary(event)" class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Durée -->
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-saffron-600 dark:text-saffron-400">Durée du séjour</label>
+                                <select id="plan-duration" class="w-full px-4 py-3 rounded-xl bg-amber-50 dark:bg-desert-900 border border-amber-900/20 dark:border-amber-500/30 text-slate-800 dark:text-amber-100 focus:ring-2 focus:ring-saffron-500 focus:outline-none">
+                                    <option value="3">3 Jours (Express)</option>
+                                    <option value="7" selected>7 Jours (Essentiel)</option>
+                                    <option value="14">14 Jours (Grand Tour)</option>
+                                </select>
+                            </div>
+
+                            <!-- Style de Voyage -->
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-saffron-600 dark:text-saffron-400">Atmosphère souhaitée</label>
+                                <select id="plan-style" class="w-full px-4 py-3 rounded-xl bg-amber-50 dark:bg-desert-900 border border-amber-900/20 dark:border-amber-500/30 text-slate-800 dark:text-amber-100 focus:ring-2 focus:ring-saffron-500 focus:outline-none">
+                                    <option value="sahara">Aventure & Désert Saharien</option>
+                                    <option value="culture">Histoire, Casbah & Musées</option>
+                                    <option value="detente">Littoral, Mer & Détente</option>
+                                    <option value="mix">Mix Tout-en-Un</option>
+                                </select>
+                            </div>
+
+                            <!-- Saison -->
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-saffron-600 dark:text-saffron-400">Saison de Voyage</label>
+                                <select id="plan-season" class="w-full px-4 py-3 rounded-xl bg-amber-50 dark:bg-desert-900 border border-amber-900/20 dark:border-amber-500/30 text-slate-800 dark:text-amber-100 focus:ring-2 focus:ring-saffron-500 focus:outline-none">
+                                    <option value="hiver">Automne / Hiver (Idéal pour le Sahara)</option>
+                                    <option value="printemps">Printemps (Floraison & Montagnes)</option>
+                                    <option value="ete">Été (Littoral & Baignade)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-saffron-500 via-terracotta-600 to-terracotta-700 text-white font-bold text-lg hover:brightness-110 transition-all shadow-xl shadow-terracotta-600/30 flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Générer mon Itinéraire Recommandé
+                        </button>
+                    </form>
+
+                    <!-- Itinerary Results Display -->
+                    <div id="itinerary-result" class="mt-10 hidden border-t border-amber-500/20 pt-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="font-serif text-2xl font-bold text-saffron-600 dark:text-saffron-400" id="itinerary-title">Votre Programme Personnalisé</h3>
+                            <button onclick="window.print()" class="text-xs px-3 py-1.5 rounded-lg bg-amber-200 dark:bg-amber-900/50 hover:bg-saffron-500 hover:text-white transition-colors">
+                                <i class="fa-solid fa-print mr-1"></i> Imprimer / Imprimer en PDF
+                            </button>
+                        </div>
+                        <div class="space-y-4" id="itinerary-days-container">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE FEATURE 2: ALGERIAN CULTURE QUIZ -->
+        <section id="quiz" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-saffron-600 dark:text-saffron-400 bg-saffron-500/10 px-3 py-1 rounded-full">Testez vos connaissances</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-slate-900 dark:text-amber-50 mt-3">Grand Quiz Algérien</h2>
+                <p class="text-slate-600 dark:text-amber-200/80 mt-2">Connaissez-vous bien l'histoire, la géographie et les traditions du pays ?</p>
+            </div>
+
+            <div class="glass-card rounded-3xl p-6 sm:p-10 shadow-2xl border border-saffron-500/20" id="quiz-card">
+                <div id="quiz-intro-screen" class="text-center py-6">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-saffron-500/20 flex items-center justify-center text-saffron-600 dark:text-saffron-400 text-3xl">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-slate-900 dark:text-amber-50 mb-3">Défiez vos amis !</h3>
+                    <p class="text-slate-600 dark:text-amber-200/80 mb-8 max-w-md mx-auto">Répondez à 5 questions interactives et découvrez votre niveau de culture algérienne.</p>
+                    <button onclick="startQuiz()" class="px-8 py-4 rounded-xl bg-saffron-500 hover:bg-saffron-600 text-white font-bold text-lg shadow-lg shadow-saffron-500/30 transition-all">
+                        Commencer le Quiz
+                    </button>
+                </div>
+
+                <div id="quiz-question-screen" class="hidden">
+                    <div class="flex items-center justify-between mb-6 border-b border-amber-900/10 dark:border-amber-500/20 pb-4">
+                        <span class="text-sm font-semibold text-saffron-600 dark:text-saffron-400" id="quiz-progress-text">Question 1 / 5</span>
+                        <span class="text-sm font-bold bg-amber-100 dark:bg-amber-900/50 px-3 py-1 rounded-full" id="quiz-score-badge">Score: 0</span>
+                    </div>
+
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 dark:text-amber-50 mb-6" id="quiz-question-text">Intitulé de la question</h3>
+
+                    <div class="space-y-3 mb-8" id="quiz-options-container">
+                        <!-- Options buttons generated by JS -->
+                    </div>
+
+                    <div id="quiz-feedback" class="hidden p-4 rounded-xl mb-6 text-sm font-medium"></div>
+
+                    <div class="flex justify-end">
+                        <button id="quiz-next-btn" onclick="nextQuestion()" class="hidden px-6 py-2.5 rounded-xl bg-terracotta-600 text-white font-semibold hover:bg-terracotta-700 transition-all">
+                            Question Suivante <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="quiz-results-screen" class="hidden text-center py-6">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-saffron-500/20 flex items-center justify-center text-saffron-500 text-4xl">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h3 class="font-serif text-3xl font-bold text-slate-900 dark:text-amber-50 mb-2">Quiz Terminé !</h3>
+                    <p class="text-lg text-slate-600 dark:text-amber-200/80 mb-6" id="quiz-final-score-text">Vous avez obtenu 4/5 !</p>
+                    <p class="text-sm text-saffron-600 dark:text-saffron-400 font-semibold mb-8" id="quiz-score-comment">Bravo, vous êtes un véritable passionné de l'Algérie !</p>
+                    <button onclick="resetQuiz()" class="px-8 py-3 rounded-xl bg-saffron-500 hover:bg-saffron-600 text-white font-bold transition-all shadow-md">
+                        <i class="fa-solid fa-rotate-right mr-2"></i> Recommencer
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHOTO GALLERY SECTION -->
+        <section id="galerie" class="py-20 bg-amber-100/40 dark:bg-desert-800/40 border-t border-amber-900/10 dark:border-amber-500/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-bold uppercase tracking-widest text-saffron-600 dark:text-saffron-400 bg-saffron-500/10 px-3 py-1 rounded-full">Panoramas & Instants</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-slate-900 dark:text-amber-50 mt-3">Galerie Photographique</h2>
+                    <p class="text-slate-600 dark:text-amber-200/80 mt-2">Un voyage en images à travers les merveilles architecturales et naturelles du pays.</p>
+                </div>
+
+                <!-- Gallery Masonry Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+                    <!-- Images rendered by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- MODALS & DRAWERS -->
+        <!-- Image Lightbox Modal -->
+        <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+            <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-saffron-400"><i class="fa-solid fa-xmark"></i></button>
+            <div class="max-w-4xl max-h-[85vh]">
+                <img id="lightbox-img" src="" alt="Aperçu" class="max-w-full max-h-[75vh] object-contain rounded-xl mx-auto">
+                <p id="lightbox-caption" class="text-center text-amber-100 mt-4 text-base font-serif"></p>
+            </div>
+        </div>
+
+        <!-- Recipe Modal -->
+        <div id="recipe-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+            <div class="glass-card max-w-2xl w-full rounded-3xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto custom-scrollbar relative text-slate-800 dark:text-amber-100">
+                <button onclick="closeRecipeModal()" class="absolute top-6 right-6 text-2xl hover:text-saffron-500"><i class="fa-solid fa-xmark"></i></button>
+                <div id="recipe-modal-content">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Destination Detail Drawer/Modal -->
+        <div id="dest-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+            <div class="glass-card max-w-3xl w-full rounded-3xl p-6 sm:p-10 max-h-[90vh] overflow-y-auto custom-scrollbar relative text-slate-800 dark:text-amber-100">
+                <button onclick="closeDestModal()" class="absolute top-6 right-6 text-2xl hover:text-saffron-500"><i class="fa-solid fa-xmark"></i></button>
+                <div id="dest-modal-content">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-desert-900 text-amber-100/80 border-t border-amber-500/20 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Col 1: Brand & Authors -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-saffron-600 flex items-center justify-center text-white font-bold text-lg">
+                            <i class="fa-solid fa-star-and-crescent"></i>
+                        </div>
+                        <span class="font-serif text-2xl font-bold text-white">Algérie <span class="text-saffron-400">Merveilleuse</span></span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-amber-200/70">
+                        Plateforme dédiée à la promotion du tourisme, de la gastronomie et du patrimoine culturel d'Algérie.
+                    </p>
+                    <div class="pt-2">
+                        <div class="inline-block px-4 py-2 rounded-xl bg-amber-950/80 border border-saffron-500/30 text-xs">
+                            <span class="text-amber-400 font-semibold block mb-0.5">Conception & Développement</span>
+                            <span class="text-white font-bold text-sm">Développé par Sidahmed et Abdessamed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation rapide -->
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4 border-b border-saffron-500/30 pb-2 inline-block">Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#accueil" class="hover:text-saffron-400 transition-colors">Accueil</a></li>
+                        <li><a href="#destinations" class="hover:text-saffron-400 transition-colors">Destinations Touristiques</a></li>
+                        <li><a href="#gastronomie" class="hover:text-saffron-400 transition-colors">Gastronomie Traditionnelle</a></li>
+                        <li><a href="#culture" class="hover:text-saffron-400 transition-colors">Culture & Musique</a></li>
+                        <li><a href="#itineraire" class="hover:text-saffron-400 transition-colors">Planificateur d'Itinéraire</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Régions phares -->
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4 border-b border-saffron-500/30 pb-2 inline-block">Régions Phares</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><span class="text-saffron-400 font-semibold">Tassili n'Ajjer & Djanet</span> (Désert)</li>
+                        <li><span class="text-saffron-400 font-semibold">Casbah d'Alger</span> (Capitale)</li>
+                        <li><span class="text-saffron-400 font-semibold">Ghardaïa</span> (M'zab)</li>
+                        <li><span class="text-saffron-400 font-semibold">Oran & Tlemcen</span> (Ouest)</li>
+                        <li><span class="text-saffron-400 font-semibold">Constantine</span> (Ponts suspendus)</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter & Contact -->
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4 border-b border-saffron-500/30 pb-2 inline-block">Restons en Contact</h4>
+                    <p class="text-sm mb-4">Abonnez-vous à la newsletter pour découvrir les trésors cachés de l'Algérie.</p>
+                    <form onsubmit="handleSubscribe(event)" class="space-y-2">
+                        <input type="email" required placeholder="Votre adresse email" class="w-full px-4 py-2.5 rounded-xl bg-desert-800 border border-amber-500/30 text-white placeholder-amber-200/50 text-sm focus:outline-none focus:border-saffron-400">
+                        <button type="submit" class="w-full py-2.5 rounded-xl bg-saffron-500 hover:bg-saffron-600 text-white font-bold text-sm transition-colors shadow-lg">
+                            S'abonner
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright & Authorship Banner -->
+            <div class="border-t border-amber-900/60 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-amber-200/60 gap-4">
+                <p>&copy; 2026 Algérie Merveilleuse. Tous droits réservés.</p>
+                <div class="flex items-center gap-2 bg-saffron-500/10 px-4 py-2 rounded-full border border-saffron-500/20">
+                    <i class="fa-solid fa-heart text-terracotta-500"></i>
+                    <span class="text-amber-100 font-medium">Développé avec passion par <strong class="text-saffron-400">Sidahmed et Abdessamed</strong></span>
+                </div>
+                <div class="flex space-x-4 text-base text-amber-200/80">
+                    <a href="#" class="hover:text-saffron-400"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-saffron-400"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-saffron-400"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="hover:text-saffron-400"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT APP LOGIC -->
+    <script>
+        // Data Structures for Destinations, Food, Culture & Quiz
+        const destinationsData = [
+            {
+                id: 'tassili',
+                name: 'Tassili n\'Ajjer & Djanet',
+                region: 'sahara',
+                image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80',
+                badge: 'Unesco & Désert',
+                shortDesc: 'Un musée à ciel ouvert au cœur du Sahara avec gravures rupestres millénaires et canyons spectaculaires.',
+                fullDesc: 'Le Tassili n\'Ajjer est un plateau montagneux au sud-est de l\'Algérie. Connu pour ses peintures rupestres datant du Néolithique, ce parc national offre des paysages féeriques de roches sculptées par le vent et de dunes dorées à Djanet.',
+                highlights: ['Gravures rupestres de Sefar', 'Dunes de la Tadrart Rouge', 'Bivouac sous les étoiles sahariennes']
+            },
+            {
+                id: 'casbah',
+                name: 'La Casbah d\'Alger',
+                region: 'cote',
+                image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80',
+                badge: 'Patrimoine Unesco',
+                shortDesc: 'La cité méditerranéenne historique accrochée aux collines d\'Alger la Blanche.',
+                fullDesc: 'La Casbah est le cœur historique d\'Alger. Avec ses ruelles sinueuses en escaliers, ses palais ottomans majestueux, ses mosquées anciennes et sa vue panoramique sur la mer Méditerranée, c\'est un bijou d\'architecture vivante.',
+                highlights: ['Palais des Rais (Bastion 23)', 'Place des Martyrs', 'Artisans dinandiers & ébénistes']
+            },
+            {
+                id: 'constantine',
+                name: 'Constantine, La Cité des Ponts',
+                region: 'histoire',
+                image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80',
+                badge: 'Histoire & Cités',
+                shortDesc: 'Perchée sur ses rochers vertigineux reliés par de célèbres ponts suspendus spectaculaires.',
+                fullDesc: 'Fondée il y a plus de 2 500 ans sous le nom de Cirta, Constantine est spectaculairement construite sur un rocher entouré par les gorges du Rhummel. Ses ponts suspendus offrent un panorama à couper le souffle.',
+                highlights: ['Pont Suspendu Sidi M\'Cid', 'Palais d\'Ahmed Bey', 'Gorges du Rhummel']
+            },
+            {
+                id: 'ghardaia',
+                name: 'Vallée du M\'zab (Ghardaïa)',
+                region: 'sahara',
+                image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80',
+                badge: 'Architecture Unique',
+                shortDesc: 'Cinq ksour fortifiés aux maisons pastel harmonieuses construites au XIe siècle.',
+                fullDesc: 'La vallée du M\'zab est un exemple exceptionnel d\'architecture saharienne intégrée. Ses cités (Ghardaïa, Beni Isguen, Melika, El Atteuf, Bounoura) ont inspiré de grands architectes modernes comme Le Corbusier.',
+                highlights: ['Marché de la criée de Beni Isguen', 'Système d\'irrigation ancestral', 'Tapis traditionnels en laine']
+            },
+            {
+                id: 'oran',
+                name: 'Oran, La Radieuse',
+                region: 'cote',
+                image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80',
+                badge: 'Littoral & Musique',
+                shortDesc: 'Capitale du Raï, célèbre pour le Fort de Santa Cruz et son ambiance festive.',
+                fullDesc: 'Deuxième ville d\'Algérie, Oran combine l\'héritage espagnol et ottoman avec une modernité vibrante. Surmontée par le mont Murdjadjo et le fort de Santa Cruz, elle offre une vue imprenable sur le golfe d\'Oran.',
+                highlights: ['Fort Santa Cruz & Chapelle', 'Front de mer d\'Oran', 'Quartier historique de Sidi El Houari']
+            },
+            {
+                id: 'kabylie',
+                name: 'Djurdjura & La Kabylie',
+                region: 'montagnes',
+                image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80',
+                badge: 'Montagnes & Nature',
+                shortDesc: 'Sommets enneigés, forêts de cèdres, villages perchés et traditions amazighs fort ancrées.',
+                fullDesc: 'La région de Kabylie se caractérise par la majestueuse chaîne du Djurdjura, ses forêts verdoyantes de Tikjda, ses villages de montagne authentiques et la richesse de son artisanat (bijoux en argent d\'Ath Yenni, poterie).',
+                highlights: ['Station de Tikjda', 'Bijoux en argent d\'Ath Yenni', 'Villages perchés traditionnels']
+            }
+        ];
+
+        const foodData = [
+            {
+                id: 'rechta',
+                name: 'La Rechta Algéroise',
+                image: 'https://images.unsplash.com/photo-1621996346565-e3d5d6281288?auto=format&fit=crop&w=800&q=80',
+                flavor: 'Doux & Parfumé',
+                desc: 'Nouilles artisanales très fines à la vapeur, servies avec un bouillon blanc parfumé à la cannelle, de la viande de poulet tendre, des navets et des pois chiches.',
+                ingredients: ['Farine', 'Poulet', 'Navets blancs', 'Cannelle', 'Pois chiches', 'Smen']
+            },
+            {
+                id: 'chakhchoukha',
+                name: 'La Chakhchoukha de Biskra',
+                image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80',
+                flavor: 'Épicé & Généreux',
+                desc: 'Feuilles de pâte très fines déchirées à la main, arrosées d\'une sauce rouge piquante à l\'agneau, piments, pois chiches et tomates concentrées.',
+                ingredients: ['Pâte de semoule', 'Agneau', 'Piments forts', 'Pois chiches', 'Épices sahariennes']
+            },
+            {
+                id: 'chorba',
+                name: 'Chorba Frik & Bourek',
+                image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80',
+                flavor: 'Festif & Traditionnel',
+                desc: 'Soupe traditionnelle au blé vert concassé (Frik), viande, menthe fraîche et coriandre, obligatoirement accompagnée de Boureks croustillants à la viande hachée.',
+                ingredients: ['Blé vert Frik', 'Viande', 'Coriandre & Menthe', 'Feuilles de Dioul']
+            },
+            {
+                id: 'pastries',
+                name: 'Baklawa & Makrout el Louz',
+                image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=800&q=80',
+                flavor: 'Sucré & Eau de Fleur d\'Oranger',
+                desc: 'Joyaux de la pâtisserie algérienne à base d\'amandes fines, de miel pur et d\'eau de fleur d\'oranger. Le Makrout el Louz fond littéralement en bouche.',
+                ingredients: ['Amandes', 'Miel de fleur', 'Eau de fleur d\'oranger', 'Zeste de citron']
+            },
+            {
+                id: 'tajine-zitoune',
+                name: 'Tajine Zitoune',
+                image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14e8?auto=format&fit=crop&w=800&q=80',
+                flavor: 'Savouré & Raffiné',
+                desc: 'Plat mijoté raffiné composé d\'olives vertes dessalées, de poulet ou veau et de carottes dans une sauce veloutée légèrement citronnée.',
+                ingredients: ['Olives vertes', 'Poulet', 'Carottes', 'Champignons', 'Citron & Persil']
+            },
+            {
+                id: 'the-menthe',
+                name: 'Thé à la Menthe Saharien',
+                image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
+                flavor: 'Mousseux & Digestif',
+                desc: 'Le rituel de bienvenue par excellence. Un thé vert gunpowder infusé longuement avec de la menthe fraîche, versé de haut pour obtenir une mousse légère.',
+                ingredients: ['Thé vert', 'Menthe fraîche', 'Sucre', 'Pignons de pin (optionnel)']
+            }
+        ];
+
+        const quizData = [
+            {
+                question: "Quelle est la capitale de l'Algérie, surnommée 'La Blanche' ?",
+                options: ["Oran", "Constantine", "Alger", "Annaba"],
+                answer: 2,
+                explanation: "Alger est la capitale du pays, ainsi nommée 'Alger la Blanche' en raison de ses bâtiments immaculés face à la mer."
+            },
+            {
+                question: "Quel site rupestre saharien algérien est classé au patrimoine mondial de l'UNESCO ?",
+                options: ["Tassili n'Ajjer", "Le Hoggar", "Timimoun", "Taghit"],
+                answer: 0,
+                explanation: "Le Tassili n'Ajjer abrite l'un des ensembles d'art rupestre préhistorique les plus importants au monde."
+            },
+            {
+                question: "Quel est le nom des nouilles fines traditionnelles algéroises servies avec une sauce blanche au poulet et navets ?",
+                options: ["Chakhchoukha", "Rechta", "Couscous", "Berkoukes"],
+                answer: 1,
+                explanation: "La Rechta est le plat emblématique des fêtes et mariages dans la région d'Alger."
+            },
+            {
+                question: "Quelle ville algérienne est mondialement connue sous le nom de 'La Cité des Ponts Suspendus' ?",
+                options: ["Tlemcen", "Ghardaïa", "Constantine", "Béjaïa"],
+                answer: 2,
+                explanation: "Constantine est célèbre pour ses ponts impressionnants franchissant les gorges profondes du Rhummel."
+            },
+            {
+                question: "Quel genre musical originaire de l'Oranie algérienne est inscrit au patrimoine immatériel de l'UNESCO ?",
+                options: ["Le Chaâbi", "Le Raï", "L'Andalou", "Le Gnawa"],
+                answer: 1,
+                explanation: "Le Raï algérien a été inscrit par l'UNESCO en 2022 comme patrimoine culturel immatériel de l'humanité."
+            }
+        ];
+
+        // Global State Variables
+        let currentQuizIndex = 0;
+        let quizScore = 0;
+        let isAudioPlaying = false;
+        let audioSynthContext = null;
+
+        // Init App on Page Load
+        window.onload = function() {
+            renderDestinations('all');
+            renderFoodGrid();
+            switchCultureTab('musique');
+            renderGallery();
+        };
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars text-xl';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-xl';
+            }
+        }
+
+        // Render Destinations
+        function renderDestinations(filter) {
+            const grid = document.getElementById('destinations-grid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? destinationsData 
+                : destinationsData.filter(d => d.region === filter);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'glass-card rounded-2xl overflow-hidden shadow-lg border border-saffron-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between';
+                card.innerHTML = `
+                    <div>
+                        <div class="relative h-52 overflow-hidden">
+                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                            <span class="absolute top-3 right-3 bg-saffron-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">${item.badge}</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-2xl font-bold text-slate-900 dark:text-amber-50 mb-2">${item.name}</h3>
+                            <p class="text-slate-600 dark:text-amber-200/80 text-sm mb-4 line-clamp-3">${item.shortDesc}</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openDestModal('${item.id}')" class="w-full py-2.5 rounded-xl bg-amber-100 dark:bg-amber-950/80 hover:bg-saffron-500 hover:text-white dark:hover:bg-saffron-500 text-saffron-700 dark:text-saffron-300 font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+                            <span>En savoir plus</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            // Update active filter button
+            document.querySelectorAll('#destination-filters button').forEach(btn => {
+                btn.className = 'dest-filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-amber-100 dark:bg-amber-950/60 text-slate-800 dark:text-amber-200 hover:bg-saffron-500 hover:text-white';
+            });
+            event?.target?.classList.add('bg-saffron-500', 'text-white');
+        }
+
+        function filterDestinations(region) {
+            renderDestinations(region);
+        }
+
+        // Render Food Grid
+        function renderFoodGrid() {
+            const grid = document.getElementById('food-grid');
+            grid.innerHTML = '';
+
+            foodData.forEach(dish => {
+                const card = document.createElement('div');
+                card.className = 'glass-card rounded-2xl overflow-hidden shadow-lg border border-terracotta-500/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between';
+                card.innerHTML = `
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="${dish.image}" alt="${dish.name}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-terracotta-700 text-white text-xs font-bold px-2.5 py-1 rounded-full">${dish.flavor}</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-amber-50 mb-2">${dish.name}</h3>
+                            <p class="text-slate-600 dark:text-amber-200/80 text-sm mb-4 leading-relaxed">${dish.desc}</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            ${dish.ingredients.map(ing => `<span class="text-[11px] px-2 py-0.5 rounded bg-amber-200/50 dark:bg-amber-950 text-slate-700 dark:text-amber-300 font-medium">${ing}</span>`).join('')}
+                        </div>
+                        <button onclick="openRecipeModal('${dish.id}')" class="w-full py-2 rounded-lg border border-terracotta-600/40 text-terracotta-700 dark:text-terracotta-400 hover:bg-terracotta-600 hover:text-white font-semibold text-xs transition-colors">
+                            Voir fiche recette
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Culture Tabs Switcher
+        function switchCultureTab(tab) {
+            const container = document.getElementById('culture-tab-content');
+            
+            // Buttons visual active toggle
+            document.querySelectorAll('.culture-tab-btn').forEach(b => {
+                b.classList.remove('border-saffron-500', 'text-saffron-600', 'dark:text-saffron-400');
+                b.classList.add('border-transparent', 'text-slate-500');
+            });
+
+            const activeBtn = document.getElementById(`tab-btn-${tab}`);
+            if(activeBtn) {
+                activeBtn.classList.remove('border-transparent', 'text-slate-500');
+                activeBtn.classList.add('border-saffron-500', 'text-saffron-600', 'dark:text-saffron-400');
+            }
+
+            if(tab === 'musique') {
+                container.innerHTML = `
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="glass-card p-6 rounded-2xl border border-saffron-500/20">
+                            <div class="w-12 h-12 rounded-xl bg-saffron-500/20 flex items-center justify-center text-saffron-600 dark:text-saffron-400 text-2xl mb-4">
+                                <i class="fa-solid fa-guitar"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold mb-2">Le Musique Chaâbi</h3>
+                            <p class="text-sm text-slate-600 dark:text-amber-200/80 leading-relaxed mb-4">Né dans la Casbah d'Alger dans les années 1930, le Chaâbi mélange poésie mélancolique (Melhoun), mandole algérien et percussions envoûtantes (Derbouka, Tar). Porté par des légendes comme El Hadj M'Hamed El Anka.</p>
+                            <span class="text-xs text-saffron-600 dark:text-saffron-400 font-bold">Instruments : Mandole, Derbouka, Violon</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-saffron-500/20">
+                            <div class="w-12 h-12 rounded-xl bg-saffron-500/20 flex items-center justify-center text-saffron-600 dark:text-saffron-400 text-2xl mb-4">
+                                <i class="fa-solid fa-compact-disc"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold mb-2">Le Raï Oranais</h3>
+                            <p class="text-sm text-slate-600 dark:text-amber-200/80 leading-relaxed mb-4">Originaire d'Oran et du nord-ouest algérien, le Raï exprime les émotions de la jeunesse. Classé au patrimoine mondial de l'UNESCO, il s'est exporté mondialement grâce à Cheb Khaled, Cheb Mami et Cheb Hasni.</p>
+                            <span class="text-xs text-saffron-600 dark:text-saffron-400 font-bold">Inscrit à l'UNESCO en 2022</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-saffron-500/20">
+                            <div class="w-12 h-12 rounded-xl bg-saffron-500/20 flex items-center justify-center text-saffron-600 dark:text-saffron-400 text-2xl mb-4">
+                                <i class="fa-solid fa-drum"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold mb-2">Musique Andalouse & Imzad</h3>
+                            <p class="text-sm text-slate-600 dark:text-amber-200/80 leading-relaxed mb-4">La musique savante arabo-andalouse florissante à Tlemcen, Constantine et Alger (San\'a, Malouf). Au Sahara, l'Imzad est un instrument à corde unique joué exclusivement par les femmes tuaregs.</p>
+                            <span class="text-xs text-saffron-600 dark:text-saffron-400 font-bold">Tradition classique millénaire</span>
+                        </div>
+                    </div>
+                `;
+            } else if(tab === 'costumes') {
+                container.innerHTML = `
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="glass-card p-6 rounded-2xl border border-terracotta-500/20">
+                            <h3 class="font-serif text-xl font-bold mb-2 text-terracotta-700 dark:text-saffron-400">Le Karakou Algérois</h3>
+                            <p class="text-sm text-slate-600 dark:text-amber-200/80 leading-relaxed mb-4">Veste cintrée en velours brodée à la main avec des fils d'or ou d'argent (Majboud ou Fetla), portée sur un pantalon traditionnel en soie fluide (Seroual Dziri).</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-terracotta-500/20">
+                            <h3 class="font-serif text-xl font-bold mb-2 text-terracotta-700 dark:text-saffron-400">La Chedda de Tlemcen</h3>
+                            <p class="text-sm text-slate-600 dark:text-amber-200/80 leading-relaxed mb-4">Costume nuptial princier classé au patrimoine mondial de l'UNESCO. Une robe majestueuse couverte de colliers de perles de culture et de parures royales.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-terracotta-500/20">
+                            <h3 class="font-serif text-xl font-bold mb-2 text-terracotta-700 dark:text-saffron-400">La Robe Kabyle (Taqendourth)</h3>
+                            <p class="text-sm text-slate-600 dark:text-amber-200/80 leading-relaxed mb-4">Robe colorée ornée de galons tressés aux couleurs vives (jaune, rouge, vert), nouée d'une ceinture en soie et accompagnée de bijoux ancestraux en argent.</p>
+                        </div>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = `
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="glass-card p-6 rounded-2xl border border-saffron-500/20">
+                            <h3 class="font-serif text-xl font-bold mb-2">Bijoux en Argent de Kabylie</h3>
+                            <p class="text-sm text-slate-600 dark:text-amber-200/80 leading-relaxed">Fabriqués à Ath Yenni, ces bijoux en argent massif sont émaillés à la main avec des nuances de bleu, vert et jaune, rehaussés de corail rouge naturel.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-saffron-500/20">
+                            <h3 class="font-serif text-xl font-bold mb-2">Tapis du M'zab & Babar</h3>
+                            <p class="text-sm text-slate-600 dark:text-amber-200/80 leading-relaxed">Tissés à la main en pure laine selon des symboles amazighs géométriques transmis de mère en fille depuis des générations.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-saffron-500/20">
+                            <h3 class="font-serif text-xl font-bold mb-2">Dinanderie & Cuivres de Constantine</h3>
+                            <p class="text-sm text-slate-600 dark:text-amber-200/80 leading-relaxed">Plateaux (Siniya), aiguières et vases en cuivre rouge ou jaune finement ciselés à la main avec des arabesques orientales raffinées.</p>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Custom Itinerary Generator Logic
+        function generateItinerary(e) {
+            e.preventDefault();
+            const duration = document.getElementById('plan-duration').value;
+            const style = document.getElementById('plan-style').value;
+            const season = document.getElementById('plan-season').value;
+
+            const container = document.getElementById('itinerary-days-container');
+            const resultDiv = document.getElementById('itinerary-result');
+            container.innerHTML = '';
+
+            let days = [];
+
+            if (style === 'sahara') {
+                days = [
+                    { day: "Jour 1", title: "Arrivée à Djanet & Oasis", desc: "Accueil traditionnel au thé à la menthe. Visite du marché artisanal de Djanet et installation en bivouac sous les palmiers." },
+                    { day: "Jour 2-3", title: "Exploration du Tassili n'Ajjer", desc: "Excursion en 4x4 vers les canyons rocheux de la Tadrart Rouge. Coucher de soleil inoubliable sur les plus hautes dunes dorées." },
+                    { day: "Jour 4-5", title: "Gravures Rupestres & Sefar", desc: "Découverte des célèbres fresques préhistoriques du 'Grand Dieu' et des 'Têtes Rondes'. Soirée contes et musique autour du feu de camp saharien." },
+                    { day: "Jour 6-7", title: "Oasis de Timimoun", desc: "Vol vers l'Oasis Rouge de Timimoun. Visite des foggaras (système d'irrigation ancestral) et des ksour en brique de terre crue rouge." }
+                ];
+            } else if (style === 'culture') {
+                days = [
+                    { day: "Jour 1", title: "Alger - La Casbah Mythique", desc: "Visite guidée des palais ottomans de la Casbah d'Alger, dégustation de pâtisseries traditionnelles dans une maison d'hôte typique." },
+                    { day: "Jour 2", title: "Alger Moderne & Musées", desc: "Visite du Musée National des Beaux-Arts, arrêt au Jardin d'Essai du Hamma et ascension au Mémorial du Martyr (Makam Echahid)." },
+                    { day: "Jour 3-4", title: "Tipaza & Cherchell", desc: "Visite des ruines romaines de Tipaza surplombant la mer et du Tombeau de la Chrétienne (Mausolée royal de Maurétanie)." },
+                    { day: "Jour 5-7", title: "Constantine - La Cité des Ponts", desc: "Découverte des ponts suspendus, visite du Palais d'Ahmed Bey et excursion sur le site romain de Timgad (la Pompéi de l'Afrique du Nord)." }
+                ];
+            } else {
+                days = [
+                    { day: "Jour 1-2", title: "Alger - La Perle Méditerranéenne", desc: "Promenade sur le boulevard Che Guevara, visite de la basilique Notre-Dame d'Afrique et dîner de poissons frais sur le port." },
+                    { day: "Jour 3-4", title: "Oran - Santa Cruz & Corniche", desc: "Ascension au Fort Santa Cruz, balade sur le Front de mer et découverte de la musique Raï traditionnelle." },
+                    { day: "Jour 5-7", title: "Tlemcen la Cité Princière", desc: "Visite du Mechouar, de la mosquée de Sidi Boumediene et baignade sur les plages sauvages de Ghazaouet." }
+                ];
+            }
+
+            days.slice(0, duration === '3' ? 2 : duration === '7' ? 4 : 4).forEach(item => {
+                const dayBox = document.createElement('div');
+                dayBox.className = 'p-5 rounded-2xl bg-amber-500/10 border border-saffron-500/20 flex flex-col sm:flex-row items-start gap-4';
+                dayBox.innerHTML = `
+                    <div class="px-3 py-1.5 rounded-lg bg-saffron-500 text-white font-bold text-sm shrink-0">${item.day}</div>
+                    <div>
+                        <h4 class="font-serif text-lg font-bold text-slate-900 dark:text-amber-100">${item.title}</h4>
+                        <p class="text-sm text-slate-600 dark:text-amber-200/80 mt-1">${item.desc}</p>
+                    </div>
+                `;
+                container.appendChild(dayBox);
+            });
+
+            resultDiv.classList.remove('hidden');
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Quiz Interactive Logic
+        function startQuiz() {
+            currentQuizIndex = 0;
+            quizScore = 0;
+            document.getElementById('quiz-intro-screen').classList.add('hidden');
+            document.getElementById('quiz-results-screen').classList.add('hidden');
+            document.getElementById('quiz-question-screen').classList.remove('hidden');
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const q = quizData[currentQuizIndex];
+            document.getElementById('quiz-progress-text').innerText = `Question ${currentQuizIndex + 1} / ${quizData.length}`;
+            document.getElementById('quiz-score-badge').innerText = `Score: ${quizScore}`;
+            document.getElementById('quiz-question-text').innerText = q.question;
+
+            const optionsContainer = document.getElementById('quiz-options-container');
+            optionsContainer.innerHTML = '';
+            document.getElementById('quiz-feedback').classList.add('hidden');
+            document.getElementById('quiz-next-btn').classList.add('hidden');
+
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'w-full text-left p-4 rounded-xl bg-amber-50 dark:bg-desert-900 border border-amber-900/10 dark:border-amber-500/20 hover:border-saffron-500 font-medium text-slate-800 dark:text-amber-100 transition-all flex items-center justify-between';
+                btn.innerHTML = `<span>${opt}</span> <i class="fa-regular fa-circle text-amber-400"></i>`;
+                btn.onclick = () => selectQuizOption(idx);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectQuizOption(selectedIndex) {
+            const q = quizData[currentQuizIndex];
+            const buttons = document.querySelectorAll('#quiz-options-container button');
+            
+            // Disable all option buttons
+            buttons.forEach(b => b.onclick = null);
+
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.classList.remove('hidden');
+
+            if (selectedIndex === q.answer) {
+                quizScore++;
+                buttons[selectedIndex].className = 'w-full text-left p-4 rounded-xl bg-emerald-500/20 border-2 border-emerald-500 font-bold text-emerald-800 dark:text-emerald-300 flex items-center justify-between';
+                feedback.className = 'p-4 rounded-xl mb-6 text-sm font-medium bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30';
+                feedback.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> <strong>Excellente réponse !</strong> ${q.explanation}`;
+            } else {
+                buttons[selectedIndex].className = 'w-full text-left p-4 rounded-xl bg-rose-500/20 border-2 border-rose-500 font-bold text-rose-800 dark:text-rose-300 flex items-center justify-between';
+                buttons[q.answer].className = 'w-full text-left p-4 rounded-xl bg-emerald-500/20 border-2 border-emerald-500 font-bold text-emerald-800 dark:text-emerald-300 flex items-center justify-between';
+                feedback.className = 'p-4 rounded-xl mb-6 text-sm font-medium bg-rose-500/10 text-rose-700 dark:text-rose-300 border border-rose-500/30';
+                feedback.innerHTML = `<i class="fa-solid fa-circle-xmark mr-2"></i> <strong>Incorrect.</strong> ${q.explanation}`;
+            }
+
+            document.getElementById('quiz-score-badge').innerText = `Score: ${quizScore}`;
+            document.getElementById('quiz-next-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuizIndex++;
+            if (currentQuizIndex < quizData.length) {
+                showQuestion();
+            } else {
+                showQuizResults();
+            }
+        }
+
+        function showQuizResults() {
+            document.getElementById('quiz-question-screen').classList.add('hidden');
+            document.getElementById('quiz-results-screen').classList.remove('hidden');
+
+            document.getElementById('quiz-final-score-text').innerText = `Vous avez obtenu ${quizScore} / ${quizData.length} points !`;
+
+            const comment = document.getElementById('quiz-score-comment');
+            if (quizScore === 5) {
+                comment.innerText = "Score Parfait ! Vous êtes un véritable expert de la culture algérienne !";
+            } else if (quizScore >= 3) {
+                comment.innerText = "Très bon résultat ! Vous connaissez très bien les richesses de l'Algérie.";
+            } else {
+                comment.innerText = "Un bon début ! Explorez encore notre site développé par Sidahmed et Abdessamed pour tout apprendre !";
+            }
+        }
+
+        function resetQuiz() {
+            startQuiz();
+        }
+
+        // Render Photo Gallery
+        function renderGallery() {
+            const grid = document.getElementById('gallery-grid');
+            const images = [
+                { url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80', caption: 'Dunes dorées du Sahara' },
+                { url: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80', caption: 'Ruelles de la Casbah d\'Alger' },
+                { url: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80', caption: 'Ponts suspendus de Constantine' },
+                { url: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80', caption: 'Architecture oasis du M\'zab' },
+                { url: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80', caption: 'Fort Santa Cruz à Oran' },
+                { url: 'https://images.unsplash.com/photo-1541518763669-27fef04b14e8?auto=format&fit=crop&w=800&q=80', caption: 'Couscous tradition aux légumes' },
+                { url: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80', caption: 'Sommets enneigés du Djurdjura' },
+                { url: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80', caption: 'Rituel du thé à la menthe' }
+            ];
+
+            grid.innerHTML = '';
+            images.forEach(img => {
+                const item = document.createElement('div');
+                item.className = 'relative overflow-hidden rounded-2xl group cursor-pointer h-60 shadow-md';
+                item.onclick = () => openLightbox(img.url, img.caption);
+                item.innerHTML = `
+                    <img src="${img.url}" alt="${img.caption}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="text-white text-sm font-serif font-semibold">${img.caption}</span>
+                    </div>
+                `;
+                grid.appendChild(item);
+            });
+        }
+
+        // Lightbox Functions
+        function openLightbox(url, caption) {
+            document.getElementById('lightbox-img').src = url;
+            document.getElementById('lightbox-caption').innerText = caption;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+        }
+
+        // Modal Openers for Details & Recipes
+        function openDestModal(id) {
+            const dest = destinationsData.find(d => d.id === id);
+            if (!dest) return;
+
+            const content = document.getElementById('dest-modal-content');
+            content.innerHTML = `
+                <div class="relative h-64 sm:h-80 rounded-2xl overflow-hidden mb-6">
+                    <img src="${dest.image}" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-saffron-500 text-white font-bold text-xs px-3 py-1 rounded-full">${dest.badge}</div>
+                </div>
+                <h3 class="font-serif text-3xl font-bold mb-4">${dest.name}</h3>
+                <p class="text-base text-slate-600 dark:text-amber-200/90 leading-relaxed mb-6">${dest.fullDesc}</p>
+                
+                <h4 class="font-serif text-lg font-bold mb-3 text-saffron-600 dark:text-saffron-400">Incontournables à visiter :</h4>
+                <ul class="space-y-2 mb-6">
+                    ${dest.highlights.map(h => `<li class="flex items-center gap-2 text-sm"><i class="fa-solid fa-check text-saffron-500"></i> ${h}</li>`).join('')}
+                </ul>
+                <div class="p-4 rounded-xl bg-amber-500/10 border border-saffron-500/20 text-xs text-amber-800 dark:text-amber-200">
+                    <strong>Conseil de voyage :</strong> Réservez vos vols internes à l'avance pour le Sahara et privilégiez la saison hivernale.
+                </div>
+            `;
+
+            document.getElementById('dest-modal').classList.remove('hidden');
+        }
+
+        function closeDestModal() {
+            document.getElementById('dest-modal').classList.add('hidden');
+        }
+
+        function openRecipeModal(id) {
+            const dish = foodData.find(f => f.id === id) || {
+                name: 'Le Couscous Algérien',
+                image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14e8?auto=format&fit=crop&w=800&q=80',
+                desc: 'Plat traditionnel de semoule cuite à la vapeur servi avec un bouillon mijoté d\'agneau, courgettes, carottes et pois chiches.',
+                ingredients: ['500g Semoule fine', '500g Agneau ou Poulet', 'Pois chiches', 'Navets & Carottes', 'Smen (Beurre clarifié)']
+            };
+
+            const content = document.getElementById('recipe-modal-content');
+            content.innerHTML = `
+                <div class="relative h-56 rounded-2xl overflow-hidden mb-6">
+                    <img src="${dish.image}" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-serif text-3xl font-bold mb-3 text-terracotta-700 dark:text-saffron-400">${dish.name}</h3>
+                <p class="text-sm text-slate-600 dark:text-amber-200/90 mb-6 leading-relaxed">${dish.desc}</p>
+                
+                <h4 class="font-serif text-lg font-bold mb-3">Ingrédients principaux :</h4>
+                <div class="grid grid-cols-2 gap-2 mb-6">
+                    ${dish.ingredients.map(ing => `<div class="p-2.5 rounded-lg bg-amber-100/50 dark:bg-desert-900 border border-amber-900/10 text-xs font-semibold flex items-center gap-2"><i class="fa-solid fa-drumstick-bite text-saffron-500"></i> ${ing}</div>`).join('')}
+                </div>
+
+                <div class="p-4 rounded-xl bg-terracotta-500/10 border border-terracotta-500/30 text-xs">
+                    <strong>Secret de chef :</strong> Pour une semoule aérée et tendre, roulez-la 3 fois à la vapeur dans un Keskas traditionnel avec un peu d'eau salée et de beurre Smen.
+                </div>
+            `;
+
+            document.getElementById('recipe-modal').classList.remove('hidden');
+        }
+
+        function closeRecipeModal() {
+            document.getElementById('recipe-modal').classList.add('hidden');
+        }
+
+        // Web Audio Synthesizer sound generator for Algerian Desert Ambience
+        function toggleAudioVibe() {
+            const btn = document.getElementById('audio-toggle-btn');
+            const icon = document.getElementById('audio-icon');
+
+            if (!isAudioPlaying) {
+                try {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    audioSynthContext = new AudioContext();
+
+                    // Generate gentle warm wind sound using synth buffer
+                    const bufferSize = audioSynthContext.sampleRate * 2;
+                    const noiseBuffer = audioSynthContext.createBuffer(1, bufferSize, audioSynthContext.sampleRate);
+                    const output = noiseBuffer.getChannelData(0);
+                    for (let i = 0; i < bufferSize; i++) {
+                        output[i] = Math.random() * 2 - 1;
+                    }
+
+                    const whiteNoise = audioSynthContext.createBufferSource();
+                    whiteNoise.buffer = noiseBuffer;
+                    whiteNoise.loop = true;
+
+                    const filter = audioSynthContext.createBiquadFilter();
+                    filter.type = 'lowpass';
+                    filter.frequency.setValueAtTime(300, audioSynthContext.currentTime);
+
+                    const gainNode = audioSynthContext.createGain();
+                    gainNode.gain.setValueAtTime(0.08, audioSynthContext.currentTime);
+
+                    whiteNoise.connect(filter);
+                    filter.connect(gainNode);
+                    gainNode.connect(audioSynthContext.destination);
+
+                    whiteNoise.start();
+                    isAudioPlaying = true;
+
+                    icon.className = 'fa-solid fa-volume-high text-lg text-saffron-500';
+                    btn.classList.add('animate-pulse');
+                } catch(e) {
+                    console.log('Audio Context unavailable');
+                }
+            } else {
+                if (audioSynthContext) {
+                    audioSynthContext.close();
+                }
+                isAudioPlaying = false;
+                icon.className = 'fa-solid fa-volume-xmark text-lg';
+                btn.classList.remove('animate-pulse');
+            }
+        }
+
+        // Handle Newsletter Subscription Mock
+        function handleSubscribe(e) {
+            e.preventDefault();
+            alert("Merci de votre inscription ! Vous recevrez nos meilleures idées de voyage en Algérie.");
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
